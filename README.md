@@ -1,8 +1,9 @@
-# ELKStackDeployment
 # Automated ELK Stack Deployment
 The files in the repository were used to configure and deploy a live ELK deployment on Microsoft Azure.
 
+
 #insert
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure Cloud Environment file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -27,6 +28,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting unauthorized traffic to the network.
+
 
   Load balancers offer an effective and cost wise defense to DDoS attacks.  The advantage of a jump box is to give access to the end user from one specfic node that can be secured and monitored. 
 
