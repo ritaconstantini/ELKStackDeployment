@@ -2,7 +2,7 @@
 # Automated ELK Stack Deployment
 The files in the repository were used to configure and deploy a live ELK deployment on Microsoft Azure.
 
-#Elk Stack Deployment Diagram
+#insert
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure Cloud Environment file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -28,13 +28,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting unauthorized traffic to the network.
 
-  -Load balancers offer an effective and cost wise defense to DDoS attacks.  The advantage of a jump box is to give access to the end user from one specfic node that can be secured and monitored. 
+  Load balancers offer an effective and cost wise defense to DDoS attacks.  The advantage of a jump box is to give access to the end user from one specfic node that can be secured and monitored. 
 
-  Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+  Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. Specifically, it logs information about the file system, including which files have changed and when.
 
-  •	TODO: What does Filebeat watch for?
-
-  •	TODO: What does Metricbeat record?
+  Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
   The configuration details of each machine may be found below. 
 
@@ -115,11 +113,11 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-Filebeat
+Filebeat: After you start Filebeat, open the Logs UI and watch your files being tailed right in Kibana. Use the search bar to filter by service, app, host, datacenter, or other criteria to track down curious behavior across your aggregated logs.
 
 #insert graph
 
-Metricbeat
+Metricbeat: Takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 #insert graph
 
