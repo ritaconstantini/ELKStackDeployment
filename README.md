@@ -32,9 +32,9 @@ Load balancing ensures that the application will be highly available, in additio
 
   Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 
-  •	TODO: What does Filebeat watch for?
+  •After you start Filebeat, open the Logs UI and watch your files being tailed right in Kibana. Use the search bar to filter by service, app, host, datacenter, or other  criteria to track down curious behavior across your aggregated logs.
 
-  •	TODO: What does Metricbeat record?
+  •Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
   The configuration details of each machine may be found below. 
 
