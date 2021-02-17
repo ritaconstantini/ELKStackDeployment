@@ -28,13 +28,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting unauthorized traffic to the network.
 
-  -Load balancers offer an effective and cost wise defense to DDoS attacks.  The advantage of a jump box is to give access to the end user from one specfic node that can be secured and monitored. 
+Load balancers offer an effective and cost wise defense to DDoS attacks.  The advantage of a jump box is to give access to the end user from one specfic node that can be secured and monitored. 
 
-  Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+ After you start Filebeat, open the Logs UI and watch your files being tailed right in Kibana. Use the search bar to filter by service, app, host, datacenter, or other  criteria   to track down curious behavior across your aggregated logs.
 
-  •After you start Filebeat, open the Logs UI and watch your files being tailed right in Kibana. Use the search bar to filter by service, app, host, datacenter, or other  criteria to track down curious behavior across your aggregated logs.
-
-  •Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
+  Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
   The configuration details of each machine may be found below. 
 
