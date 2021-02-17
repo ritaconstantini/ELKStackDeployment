@@ -117,7 +117,7 @@ These Beats allow us to collect the following information from each machine:
 
 Filebeat: After you start Filebeat, open the Logs UI and watch your files being tailed right in Kibana. Use the search bar to filter by service, app, host, datacenter, or other criteria to track down curious behavior across your aggregated logs.
 
-#insert graph
+![](https://github.com/ritaconstantini/ELKStackDeployment/blob/main/kibana%20system%20log.PNG)
 
 Metricbeat: Takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
