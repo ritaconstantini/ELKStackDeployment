@@ -121,7 +121,7 @@ Filebeat: After you start Filebeat, open the Logs UI and watch your files being 
 
 Metricbeat: Takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
-#insert graph
+![](https://github.com/ritaconstantini/ELKStackDeployment/blob/main/kibana%20metrics.PNG)
 
 # Using the Playbook
 
