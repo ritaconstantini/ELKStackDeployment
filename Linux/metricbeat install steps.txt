@@ -1,0 +1,110 @@
+navigate to jump-box VM then ansible container:
+
+ssh azureuser@13.77.182.70
+sudo docker start sleepy_shaw
+sudo docker attach sleepy_shaw
+
+root@040d70880495:
+
+Azure Portal: portal.azure.com
+Turn on virtual machines (confirm they are running)
+
+Kibana URL: 40.122.170.239/app/kibana
+
+Add Metric Data
+Docker Metrics
+DEB
+
+From Ansible VM (Jump-Box to Sleepy_Shaw root@040d70880495)
+
+GitBash Terminal Run:
+
+curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+dpkg -i metricbeat-7.6.1-amd64.deb
+
+
+
+/etc/ansible/files
+
+nano metricbeat-config.yml
+
+
+#ELK VM private IP Address
+setup.kibana:
+  host: "10.1.0.4:5601"
+
+
+output.elasticsearch:
+#ELK VM IP
+  hosts: ["10.1.0.4:9200"]
+  username: "elastic"
+  password: "changeme"
+
+Save & Exit
+
+/etc/metricbeat
+nano metricbeat.yml
+
+---
+- name: Install metric beat
+  hosts: webservers
+  become: true
+  tasks:
+    # Use command module
+  - name: Download metricbeat
+    command: curl -L -O curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+    # Use command module
+  - name: install metricbeat
+    command: dpkg -i metricbeat-7.6.1-amd64.deb
+
+    # Use copy module
+  - name: drop in metricbeat config
+    copy:
+      src: /etc/ansible/files/metricbeat-config.yml
+      dest: /etc/metricbeat/metricbeat.yml
+
+    # Use command module
+  - name: enable and configure docker module for metric beat
+    command: metricbeat modules enable docker
+
+    # Use command module
+  - name: setup metric beat
+    command: metricbeat setup                                                                                                                                                                                                                                                                                                                                                                                                                                                                 # Use command module                                                                                                                                                                                                                       - name: start metric beat
+    command: service metricbeat start
+
+    # Use systemd module
+  - name: enable service metricbeat on boot
+    systemd:
+      name: metricbeat
+      enabled: yes
+
+Save & Exit
+
+root@040d70880495 
+
+/etc/metricbeat
+ansible-playbook metricbeat.yml
+
+Verify playbook runs as expected
+
+Go to: 
+Kibana URL: 40.122.170.239/app/kibana
+Click Docker metrics dashboard
+Verify data displays
+
+There was much rejoicing!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
